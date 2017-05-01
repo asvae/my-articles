@@ -6,7 +6,7 @@
 
 Today I'll show how to make your own navigation component while attaining minimal duplication.
 
-Here's the [code for code gyus](src/NavigationBlock.vue).
+Here's the [code for code gyus][navigation component].
 
 ## The problem
 
@@ -71,7 +71,7 @@ We also want our navigation to be reactive and respond to route changes. For tha
 ]
 ```
 
-Going into details of how it's done is out of scope of this article, so I got a helper [class on the ready](src/Utility/ObjectHelpers.js).
+Going into details of how it's done is out of scope of this article, so I got a helper [class on the ready][object helpers].
 
 ## Component
 
@@ -169,7 +169,10 @@ Why not make breadcrumbs if all it takes is several lines of code?
   },
 ```
 
-If you missed something check the [complete component](src/NavigationBlock.vue). You might also use it "as is" in case of harsh deadlines.
+If you missed something check the [complete component][navigation component]. You might also use it "as is" in case of harsh deadlines.
 
 That's it. Let me know if it works for you.
 
+[full source]: https://github.com/asvae/my-articles/blob/master/vue-navbar
+[navigation component]: https://github.com/asvae/my-articles/blob/master/vue-navbar/src/NavigationBlock.vue
+[object helpers]: https://github.com/asvae/my-articles/blob/master/vue-navbar/src/Utility/ObjectHelpers.js
