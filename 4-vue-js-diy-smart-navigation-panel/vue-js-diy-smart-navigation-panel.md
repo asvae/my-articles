@@ -4,7 +4,7 @@
 
 *If you're vue developer this article will hit the spot. Beginner or not.*
 
-Today I'll show you how to make your own navigation component while attaining minimal duplication.
+Today I'll show how to make your own navigation component while attaining minimal duplication.
 
 Here's the [code for code gyus](src/NavigationBlock.vue).
 
@@ -71,7 +71,7 @@ We also want our navigation to be reactive and respond to route changes. For tha
 ]
 ```
 
-Going into details of how it's done is out of scope of this article, so I got a (class on hold for you)[/src/Utility/ObjectHelpers.js].
+Going into details of how it's done is out of scope of this article, so I got a helper [class on the ready](src/Utility/ObjectHelpers.js).
 
 ## Component
 
@@ -125,7 +125,7 @@ Now for template:
 </template>
 ```
 
-We should also composeName for route to define how the name would be displayed. I use `route.meta.title` and then falling back to `route.name`. But you might as well derive your own scheme, using `vue-i18n`, for example. 
+We should also composeName for route to define how the name would be displayed. I use `route.meta.title` and then fall back to `route.name`. But you might as well derive your own scheme, using `vue-i18n`, for example. 
 
 ```javascript
   methods: {

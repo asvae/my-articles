@@ -25,7 +25,7 @@
   // Component creates navigation panel for your routes.
   // Routes you want to be displayed should have name attribute.
 
-  import ObjectHelpers from '../../../classes/Utility/ObjectHelpers.js'
+  import ObjectHelpers from './Utility/ObjectHelpers.js'
 
   export default {
     name: 'NavigationBlock',
