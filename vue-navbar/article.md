@@ -125,7 +125,7 @@ Now for template:
 </template>
 ```
 
-We should also composeName for route to define how the name would be displayed. I use `route.meta.title` and then fall back to `route.name`. But you might as well derive your own scheme, using `vue-i18n`, for example. 
+We should also compose name for route to define how the name would be displayed. I use `route.meta.title` and then fall back to `route.name`. But you might as well derive your own scheme, using `vue-i18n`, for example. 
 
 ```javascript
   methods: {
