@@ -1,5 +1,5 @@
 {
-  "plugins": ["disqus", "styles-sass"],
+  "plugins": ["disqus"],
   "styles": {
     "website": "./styles/website.sass"
   },
