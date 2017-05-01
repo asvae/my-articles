@@ -171,5 +171,5 @@ Why not make breadcrumbs if all it takes is several lines of code?
 
 If you missed something check the [complete component](src/NavigationBlock.vue). You might also use it "as is" in case of harsh deadlines.
 
-That's it. Let me know how it works for you.
+That's it. Let me know if it works for you.
 
