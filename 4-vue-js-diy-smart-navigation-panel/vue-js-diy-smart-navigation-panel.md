@@ -1,4 +1,4 @@
-![vue navigation](4-vue-js-diy-smart-navigation-panel/assets/navigation.gif)
+![vue navigation](assets/navigation.gif)
 
 # Vue.js DYI smart navigation
 
@@ -6,7 +6,7 @@
 
 Today I'll show you how to make your own navigation component while attaining minimal duplication.
 
-Here's the [code for code gyus](4-vue-js-diy-smart-navigation-panel/src/NavigationBlock.vue).
+Here's the [code for code gyus](src/NavigationBlock.vue).
 
 ## The problem
 
@@ -169,7 +169,7 @@ Why not make breadcrumbs if all it takes is several lines of code?
   },
 ```
 4-vue-js-diy-smart-navigation-panel/src/NavigationBlock.vue
-If you missed something check the [complete component](4-vue-js-diy-smart-navigation-panel/src/NavigationBlock.vue). You might also use it "as is" in case of harsh deadlines.
+If you missed something check the [complete component](src/NavigationBlock.vue). You might also use it "as is" in case of harsh deadlines.
 
 That's it. Let me know how it works for you.
 
