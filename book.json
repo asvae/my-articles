@@ -2,7 +2,7 @@
   "plugins": ["disqus"],
   "pluginsConfig": {
     "disqus": {
-      "shortName": "https-asvae-github-io"
+      "shortName": "asvae-gitbooks-io"
     }
   }
 }
