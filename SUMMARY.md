@@ -1,3 +1,3 @@
 # Articles
 
-* 2017-05-01 [Vue.js smart navigation panel DIY](vue-navbar/article.md)
+* 2017-05-01 [Navigation panel in vue.js — do it yourself (DYI)](vue-navbar/article.md)
