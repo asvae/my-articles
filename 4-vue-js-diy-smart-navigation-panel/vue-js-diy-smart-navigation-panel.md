@@ -1,6 +1,6 @@
-![vue navigation](assets/navigation.gif)
-
 # Vue.js DYI smart navigation
+
+![vue navigation](assets/navigation.gif)
 
 *If you're vue developer this article will hit the spot. Beginner or not.*
 
@@ -14,7 +14,7 @@ Take a look at the following code. That's how your navigation goes normally.
 
 ##### Template
 
-```HTML
+```html
 <router-link :to="{name: user}">User</router-link>
 <div>
     <router-link :to="{name: settings}">Settings</router-link>
@@ -52,7 +52,7 @@ const routes = [{
 ```
 
 You might notice that template part is clearly abundant in many cases. Optimal navigation component might look like this:
-```HTML
+```html
 <vm-navigation :routes="routes"/>
 ```
 
@@ -108,7 +108,7 @@ Our actions were:
 * Filter out routes without children.
 
 Now for template:
-```HTML
+```html
 <template>
     <div>
         <div class="navigation-block"
@@ -145,7 +145,7 @@ Toss in some styling and we're mostly done.
 
 Why not make breadcrumbs if all it takes is several lines of code?
 
-```HTML
+```html
     <div class="breadcrumbs">
         <router-link class="breadcrumbs__item"
                      v-for="route in nestedRoutes"
