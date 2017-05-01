@@ -1,8 +1,5 @@
 {
   "plugins": ["disqus"],
-  "styles": {
-    "website": "./styles/website.sass"
-  },
   "pluginsConfig": {
     "disqus": {
       "shortName": "asvae-gitbooks-io"
