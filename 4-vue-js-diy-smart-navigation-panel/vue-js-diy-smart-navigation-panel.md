@@ -168,7 +168,7 @@ Why not make breadcrumbs if all it takes is several lines of code?
     },
   },
 ```
-4-vue-js-diy-smart-navigation-panel/src/NavigationBlock.vue
+
 If you missed something check the [complete component](src/NavigationBlock.vue). You might also use it "as is" in case of harsh deadlines.
 
 That's it. Let me know how it works for you.
