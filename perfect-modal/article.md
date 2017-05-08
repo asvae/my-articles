@@ -112,7 +112,9 @@ For this approach we attach click event handler to `document.body`, we also prev
 // ... 
 ```
 
-The downside is that any other modal will prevent bubbling to `document`. Meaning no nesting `¯\_(ツ)_/¯`.
+The downside is that any other modal will prevent bubbling to `document`. 
+
+Meaning no nesting `¯\_(ツ)_/¯`.
 
 
 Here's the [component code][document event modal code].
@@ -138,6 +140,9 @@ Template is just normal. Nothing there.
 ```
 
 ### Script
+
+We'll check, whether the component the click landed on is child of current modal. If not — modal hides itself.
+
 ```javascript
     import DomHelpers from './Utility/DomHelpers.js'
 
@@ -153,10 +158,10 @@ Here's the [component code][click target modal code].
 
 Let's test it.
 
- -[x] Floats above everything else.
- -[x] Is not blocking.
- -[x] Supports nesting of any depth.
- -[x] Doesn't conflict with other elements on the page.
+  - [x] Floats above everything else.
+  - [x] Is not blocking.
+  - [x] Supports nesting of any depth.
+  - [x] Doesn't conflict with other elements on the page.
  
 Done.
 
