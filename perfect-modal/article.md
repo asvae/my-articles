@@ -10,7 +10,7 @@ Hey. Today we will pursue our dream for perfect modal. Being perfect means:
 * Supports nesting of any depth.
 * Doesn't conflict with other elements on the page.
  
-This seems attainable. Let's glance over different solutions I harbored.
+Seems easy enough, right? Let's glance over different solutions I harbored.
 
 ## Full screen overlay
 
