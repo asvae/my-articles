@@ -141,7 +141,7 @@ Template is just normal. Nothing there.
 
 ### Script
 
-We'll check, whether the component the click landed on is child of current modal. If not — modal hides itself.
+We'll check, if click landed on child. In case it didn't — modal hides itself.
 
 ```javascript
     import DomHelpers from './Utility/DomHelpers.js'
