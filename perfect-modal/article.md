@@ -2,7 +2,7 @@
 
 **#modal #popup #javascript #vuejs 2017-05-08**
 
-![vue navigation](assets/perfect-modal-header.gif)
+![vue navigation](assets/perfect-modal-header.png)
 
 Hey. Today we will pursue our dream for perfect modal. Being perfect means:
 * Floats above everything else.
