@@ -1,12 +1,15 @@
 # Vue.js DYI smart navigation
 
-![vue navigation](assets/navigation.gif)
+**#navigation-panel #javascript #vue 2017-05-01**
 
 *If you're vue developer this article will hit the spot. Beginner or not.*
 
+![vue navigation](assets/navigation.gif)
+
+
 Today I'll show how to make your own navigation component while attaining minimal duplication.
 
-Here's the [code for code gyus][navigation component].
+Here's the [code for code guys][navigation component].
 
 ## The problem
 
