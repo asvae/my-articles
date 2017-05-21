@@ -2,7 +2,7 @@ export default class DateRange {
   start: Date
   end: Date
 
-  constructor ({ start, end }) {
+  constructor ({ start, end } = {}) {
     this.start = Date(start)
     this.end = Date(end)
   }

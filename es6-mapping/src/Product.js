@@ -3,7 +3,7 @@ export default class Product {
   name: String
   hourlyPrice: Number
 
-  constructor ({ id, name, hourlyPrice }) {
+  constructor ({ id, name, hourlyPrice } = {}) {
     this.id = id
     this.name = name
     this.hourlyPrice = hourlyPrice

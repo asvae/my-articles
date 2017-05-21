@@ -7,7 +7,7 @@ export default class Order {
   dateRange: DateRange
   product: Product
 
-  constructor ({ id, name, dateRange, product }) {
+  constructor ({ id, name, dateRange, product } = {}) {
     this.id = id
     this.name = name || ''
     this.dateRange = new DateRange(dateRange) || null

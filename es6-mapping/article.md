@@ -1,6 +1,8 @@
 # Peculiar es6 mapping approach
 
-**#javascript #es6 #vuejs 2017-05-20**
+![vue navigation](assets/Header.png)
+
+**#javascript #es6 #vuejs 2017-05-21**
 
 Today my talk covers response mapping. By mapping I mean converting standard js objects into classed es6 objects. The latter solution is much needed when working with deep nested structures as it allows to bind behaviour to data. 
 
@@ -55,7 +57,7 @@ class Order {
   dateRange: DateRange
   product: Product
 
-  constructor ({ id, name, dateRange, product }) {
+  constructor ({ id, name, dateRange, product } = {}) {
     this.id = id
     this.name = name || ''
     this.dateRange = new DateRange(dateRange) || null
@@ -78,7 +80,7 @@ class Product {
   name: String
   hourlyPrice: Number
 
-  constructor ({ id, name, hourlyPrice }) {
+  constructor ({ id, name, hourlyPrice } = {}) {
     this.id = id
     this.name = name
     this.hourlyPrice = hourlyPrice
@@ -91,7 +93,7 @@ class DateRange {
   start: Date
   end: Date
 
-  constructor ({ start, end }) {
+  constructor ({ start, end } = {}) {
     this.start = Date(start)
     this.end = Date(end)
   }
@@ -116,9 +118,9 @@ class DateRange {
 }
 ```
 
-After implementing those classes actual mapping is no brainer:
+After implementing those classes actual mapping is a no brainer:
 ```javascript
-new Order(reponse)
+new Order(response)
 ```
 
 As a result of mapping we get the same tree of data, but now it's (somewhat) typed and contains behaviour. Also note that children mapping happens free of charge. Meaning that after implementing a bunch of classes different tree configurations will be mapped automagically.
