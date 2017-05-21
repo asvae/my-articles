@@ -1,8 +1,8 @@
 # Peculiar es6 mapping approach
 
-![vue navigation](assets/Header.png)
-
 **#javascript #es6 #vuejs 2017-05-21**
+
+![vue navigation](assets/Header.png)
 
 Today my talk covers response mapping. By mapping I mean converting standard js objects into classed es6 objects. The latter solution is much needed when working with deep nested structures as it allows to bind behaviour to data. 
 
@@ -38,17 +38,17 @@ And sure enough you got a response:
 
 You toss data in component and everything goes fine.
 
-But at some point you decide to show your user order price. Which must be calculated depending on `product.hourly_price` and `order.date_range`. 
+But at some point you decide to show order price in component. Which must be calculated depending on `product.hourly_price` and `order.date_range`. 
 
-You might implement the calculation logic in component. But that won't scale. Because the exactly same calculation will be used in CreateOrder DisplayOrder components. And maybe even OrderList. You never know.
+You might implement the calculation logic in component. But that won't scale. Because exactly the same calculation will be used in `CreateOrder` and `DisplayOrder` components. And maybe even `OrderList`. You never know.
 
 ## Mapping
 
 Let's solve the problem OOP way.
 
-![vue navigation](assets/UML.jpg)
+Obviously we'd need 3 classes: `Order`, `Product` and `DateRange`. Implementing them one by one won't take long.
 
-Obviously we'd need 3 classes: Order, Product and DateRange. Implementing em one by one won't take long.
+![vue navigation](assets/UML.jpg)
 
 ```javascript
 class Order {
@@ -118,7 +118,7 @@ class DateRange {
 }
 ```
 
-After implementing those classes actual mapping is a no brainer:
+After doing these classes actual mapping is a no-brainer:
 ```javascript
 new Order(response)
 ```
@@ -129,7 +129,11 @@ As a result of mapping we get the same tree of data, but now it's (somewhat) typ
 
 Example component will be [`EditOrder.vue`][component code].
 
-On create we will fetch via ajax order data, promtly map it, then attach to component, so that it could be displayed in template.
+On `create` we will:
+ 
+ * fetch via ajax the order data, 
+ * promtly map it, 
+ * then attach the mapped order to component, so that it could be displayed in template.
 
 ```javascript
     data () {
@@ -142,7 +146,7 @@ On create we will fetch via ajax order data, promtly map it, then attach to comp
     },
 ```
 
-And here's a template itself.
+And here's the template itself.
 
 ```html
 <div class="form" v-if="editedOrder">
@@ -152,7 +156,7 @@ And here's a template itself.
 </div>
 ```
 
-Price will be calculated, just as promised. Component is clean and `Order` object is also clean and testable. 
+Price will be calculated, just as promised. While component and `Order` object are clean and testable. 
 
 That's it. As always, I prepared full [source code][source code].
 
