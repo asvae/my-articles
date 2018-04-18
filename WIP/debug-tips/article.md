@@ -17,7 +17,7 @@ They're powerful, native and are getting better with each Chrome upgrade.
 
 ## Advanced tricks
 
-### Access component without dev tools
+### Access component without chrome vue dev tools
 
 Let's assume you have a simple component, and your intention is to test whether DOM responds to `text` changes or not.
 
