@@ -2,7 +2,7 @@
 
 This article intends to highlight several cases from my developer experience when usage of vuex was not beneficial or even harmful for project.
 
-In first part or the articles I'll skim over problems. In second part I'll provide a couple of solutions which could be superior in your case.
+In first part or the article I'll skim over problems. In second part I'll provide a couple of solutions which could be superior in your case.
 
 ## Deep nesting
 
@@ -39,9 +39,13 @@ Furthermore, developing on vuex, you have 2 ways to progress:
 * Stick to manual and simplest cases (conventional). Which is limited (but reasonable for app with ~100 components).
 * Invent your own methods and patterns (unconventional). Which requires additional documentation and training. You'd also lack tooling and IDE support.
 
+## No classes
+
+You may think of vuex storage as of pure JSON store. As such it does not provide any of the rich object features javascript does. 
+
 ## Complexity
 
-Vuex is not a cheap solution. You can write less or comparable amount of code withot vuex, while getting same, if not better, results.
+Vuex is not a cheap (easy) solution. You can write less or comparable amount of code without vuex, while getting same, if not better, results.
 
 Which brings us to the second section.
 
