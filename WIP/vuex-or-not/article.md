@@ -4,6 +4,14 @@ This article intends to highlight several cases from my developer experience whe
 
 In first part or the article I'll skim over problems. In second part I'll provide a couple of solutions which could be superior in your case.
 
+# Problems
+
+TL;DR:
+* nested data is hard;
+* no patterns;
+* no classes;
+* complexity.
+
 ## Deep nesting
 
 Imagine you have a structure like this:
@@ -26,17 +34,17 @@ Then you edit the form and save value:
 this.editField(product.id, field.id, fieldValue.id, fieldValueData)
 ```
 
-Inside the action you would have to find **product** in list, then **field** in **product**, then **fieldValue** in **field**. After that you'd have to merge changes. This easily takes 10-15 lines of code. And such cases could be numerous, depending on complexity of you app.
+Inside the action you would have to find **product** in list, then **field** in **product**, then **fieldValue** in **field**. After that you'd have to merge changes in store. This easily takes 10-15 lines of code. And such cases could be numerous, depending on complexity of you app.
 
-Second, less obvious problem, is that the solution has tight coupling. When we pass `product.id` via props into **FieldValueEdit**, component becomes knowledgeable about **product**. Which makes impossible to reuse component in different contexts nor test it in isolation.
+Second, less obvious problem, is that the solution has tight coupling. After we pass `product.id` via props into **FieldValueEdit** -  component becomes knowledgeable about **product**. Which makes it impossible to reuse component in different contexts nor test in isolation.
 
 ## Communication and conventions
 
-For communication we got UML and rich OOP thesaurus, yet vuex doesn't benefit from either of these. This limits developers in ability to showcase high level ideas without getting immersed in actual code.
+To simplify communication between developers we have powerful tools, such as UML and rich OOP thesaurus, yet vuex doesn't benefit from any of those. This limits developers in ability to showcase high level ideas without getting immersed in actual code.
 
 Furthermore, developing on vuex, you have 2 ways to progress:
 
-* Stick to manual and simplest cases (conventional). Which is limited (but reasonable for app with ~100 components).
+* Stick to manual and simplest cases (conventional). Which is limited (but reasonable for app with number of components ≤ 100).
 * Invent your own methods and patterns (unconventional). Which requires additional documentation and training. You'd also lack tooling and IDE support.
 
 ## No classes
