@@ -1,14 +1,14 @@
-# Hunt for perfect modal
+# Vue.js hunt for perfect modal
 
 **#modal #popup #javascript #vuejs 2017-05-08**
 
 ![vue navigation](assets/perfect-modal-header.png)
 
-Hey. Today we will pursue our dream for perfect modal. Being perfect means:
-* Floats above everything else.
+Hey. Today we will pursue our dream of a perfect modal. Perfect means:
+* It floats above everything else.
 * Is not blocking.
 * Supports nesting of any depth.
-* Doesn't conflict with other elements on the page.
+* Doesn't collide with other elements on the page.
  
 Seems easy enough, right? Let's glance over different solutions I harbored.
 
@@ -16,7 +16,7 @@ Seems easy enough, right? Let's glance over different solutions I harbored.
 
 ![vue navigation](assets/overlay.gif)
 
-For this solution we create invisible overlay over whole window. Overlay catches all clicks.
+For this solution we create invisible overlay over a whole window. Overlay catches all clicks.
 
 ### Template
 ```html
@@ -54,7 +54,7 @@ For this solution we create invisible overlay over whole window. Overlay catches
 }
 ```
 
-Looks fine, right? Except for it's blocking... Which means that, in order to open another modal, user must close the current one. That's 2 actions and we can do better.
+Looks fine, doesn't it? Except that it's blocking… Which means that, in order to open another modal, a user has to close the current one. That's 2 actions and we can do better.
 
 Here's the [component code][full screen overlay modal code].
 
@@ -62,7 +62,7 @@ Here's the [component code][full screen overlay modal code].
 
 ![vue navigation](assets/stop-propagation-window-event.gif)
 
-For this approach we attach click event handler to `document.body`, we also prevent click event propagation on modal click.
+For this approach we attach a click event handler to `document.body`, we also prevent click event propagation on modal click.
  
 ### Template
 ```html
@@ -123,11 +123,11 @@ Here's the [component code][document event modal code].
 
 ![vue navigation](assets/click-target.gif)
 
-Ok. This is an ultimate solution. For the most part it's the same as previous one. Only that we won't prevent propagation. And instead we'll check the `event.target`.
+Ok. This is an ultimate solution. For the most part it's the same as a previous one. Only that we won't prevent propagation. And instead we'll check the `event.target`.
  
 ### Template
 
-Template is just normal. Nothing there.
+Template is regular. Nothing special here.
 
 ```html
 <div class="click-target-modal">
@@ -141,7 +141,7 @@ Template is just normal. Nothing there.
 
 ### Script
 
-We'll check, if click landed on child. In case it didn't — modal hides itself.
+We check, if a click landed on child. In case it didn't — modal hides itself.
 
 ```javascript
     import DomHelpers from './Utility/DomHelpers.js'
@@ -158,7 +158,7 @@ Here's the [component code][click target modal code].
 
 Let's test it.
 
-  - [x] Floats above everything else.
+  - [x] It floats above everything else.
   - [x] Is not blocking.
   - [x] Supports nesting of any depth.
   - [x] Doesn't conflict with other elements on the page.
