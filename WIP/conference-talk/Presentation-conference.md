@@ -141,7 +141,6 @@ export class Company {
 }
 ```
 
-
 -----
 
 #### Мапперы
@@ -168,7 +167,7 @@ export class CompanyMapper {
 
 ```js
 export class CompanyRepository {
-  async create (company) {
+  static async create (company) {
     const payload = CompanyMapper.toObject(company)
     await axios.post('companies', payload)
   }
